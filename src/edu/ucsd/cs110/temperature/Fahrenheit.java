@@ -8,12 +8,13 @@ public class Fahrenheit extends Temperature{
     public String toString()
     {
         // TODO: Complete this method
-        return "";
+        return Float.toString(this.getValue()) + " F";
     }
     public Temperature toCelsius(){
-        return null;
+        return new Celsius((this.getValue()-32)*5/9) {
+        };
     }
     public Temperature toFahrenheit(){
-        return null;
+        return this;
     }
 }
